@@ -126,6 +126,16 @@ local mappings = {
       "<cmd>Gitsigns diffthis HEAD<cr>",
       "Diff",
     },
+    ["C-R"] = {
+      "<cmd>TroubleToggle lsp_references<cr>",
+      "References of the word under the cursor from the builtin LSP client"
+    },
+    ["C-D"] = {
+      "<cmd>TroubleToggle lsp_defintions<cr>", "Definitions of the word under the cursor from the builtin LSP client"
+    },
+    ["C-T"] = {
+      "<cmd>TroubleToggle lsp_type_definitions<cr>", "Type definitions of the word under the cursor from the builtin LSP client"
+    },
   },
 
   l = {
@@ -181,6 +191,14 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  x = {
+    name = "Trouble",
+    x = { "<cmd>TroubleToggle<cr>", "Toggle Trouble" },
+    w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Show workspace diagnostics with Trouble" },
+    d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Show documentation diagnostics with Trouble" },
+    l = { "<cmd>TroubleToggle loclist<cr>", "Show items from window location list with Trouble" },
+    q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix with Trouble" },
+  }
 }
 
 which_key.setup(setup)
